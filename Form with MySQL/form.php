@@ -1,0 +1,39 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Form</title>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+    <form action="comments.php" method="POST" class="speaker-form" autocomplete="on" onSubmit="alert('Thank you for your comment.');">
+      <fieldset>
+        <div class="row"><strong>Submit Comment:</strong></div>
+        <div class="row">
+          <label for="email" class="label-block">Your Email:</label>
+          <input id="email" name="email" type="email" placeholder="youremailaddres@yourdomain-name.com" autofocus  required/>
+        </div>
+        <div class="row">
+          <label for="name">Your Name:</label>
+          <input id="name" name="name" type="text" maxlength="50" pattern=".{2,50}" title="Must not be less than 2 characters or longer then 50"/>
+        </div>
+        <div class="row">
+          <label for="comment" class="label-block">Your Comment:</label>
+          <textarea id="comment" name="comment" required="required" maxlength="280" minlength="50" ></textarea>
+        </div>
+        <div class="row">
+          <label class="checkbox-label" for="terms">
+          <span>You Must Agree to Our <a href="#">Terms &amp; Conditions:</a></span>
+          <input id="terms" name="terms" type="checkbox" value="Yes" required/>
+          </label>
+        </div>
+        <div class="last-div">
+          <button type="submit">SUBMIT FORM</button>
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>
